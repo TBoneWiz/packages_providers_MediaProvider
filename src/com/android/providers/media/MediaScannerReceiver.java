@@ -51,7 +51,7 @@ public class MediaScannerReceiver extends BroadcastReceiver {
 
         // MediaScanner behavior on boot
         final boolean mSoB = SlimSettings.System.getInt(context.getContentResolver(),
-            SlimSettings.System.MEDIA_SCANNER_ON_BOOT, 0) == 1;
+            SlimSettings.System.MEDIA_SCANNER_ON_BOOT, 1) == 1;
 
         if (Intent.ACTION_BOOT_COMPLETED.equals(action)) {
             if (mSoB) {
